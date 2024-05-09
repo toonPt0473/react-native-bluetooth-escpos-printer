@@ -1,5 +1,15 @@
 buildscript {
+    ext {
+        buildToolsVersion = "34.0.0"
+        minSdkVersion = 33
+        compileSdkVersion = 34
+        targetSdkVersion = 34
+        supportLibVersion = "27.1.1"
+    }
     repositories {
+        google()
+        jcenter()
+        mavenCentral()
         jcenter { url "https://jcenter.bintray.com/" }
         maven {url "https://repo.spring.io/plugins-release/"}
         mavenCentral()
@@ -53,7 +63,7 @@ repositories {
 }
 
 dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    // implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation 'com.facebook.react:react-native:+'  // From node_modules
     implementation group: 'com.android.support', name: 'support-v4', version: '27.0.0'
     implementation "com.google.zxing:core:3.3.0"
